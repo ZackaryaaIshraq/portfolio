@@ -1,0 +1,177 @@
+/* ==========================================================
+   Motion layer. Loaded after styles.css; driven by fx.js.
+   Rule of thumb used throughout:
+     translate  = scroll reveals        (CSS)
+     scale      = press feedback        (CSS)
+     transform  = tilt, magnets, scroll (written by fx.js)
+   Keeping them on separate properties stops them fighting.
+   ========================================================== */
+
+/* ---------- Atmosphere canvas sits behind everything ---------- */
+#atmos { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+main, .foot { position: relative; z-index: 1; }
+
+/* ---------- Reveals now use `translate` ---------- */
+.js [data-reveal] { transform: none; translate: 0 16px; transition: opacity 700ms ease, translate 900ms var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms); }
+.js [data-reveal].in { translate: none; }
+
+/* ---------- Buttons ---------- */
+:where(.btn) { position: relative; overflow: hidden; }
+.btn { transition: scale 160ms var(--ease-out), background-color 200ms ease, color 200ms ease, border-color 200ms ease, box-shadow 200ms ease; }
+.btn:active { transform: none; scale: .97; }
+.btn-lg { height: 48px; padding: 0 22px; font-size: 15px; }
+.btn-cobalt { background: var(--cobalt); color: #fff; box-shadow: 0 12px 28px -12px rgba(30, 58, 240, .7), inset 0 1px 0 rgba(255, 255, 255, .28); }
+.btn-cobalt::after { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, .32) 50%, transparent 65%); transform: translateX(-120%); transition: transform 0s; pointer-events: none; }
+.btn-line { border: 1px solid var(--line-2); background: rgba(250, 249, 246, .72); }
+.go.btn { margin-top: 24px; padding: 0 16px; border: 1px solid var(--line-2); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.open { margin-top: 18px; }
+.open a { position: relative; overflow: hidden; }
+.seg button { overflow: hidden; }
+
+/* tap ripple */
+.ripple { position: absolute; left: var(--x); top: var(--y); width: var(--d); height: var(--d); translate: -50% -50%; border-radius: 50%; background: currentColor; pointer-events: none; animation: ripple 620ms var(--ease-out) forwards; }
+@keyframes ripple { from { transform: scale(.12); opacity: .26; } to { transform: scale(1); opacity: 0; } }
+
+/* ---------- Hero ---------- */
+.hero-copy, .hero-stage { will-change: transform; }
+
+/* ---------- Proof: words light up as you scroll ---------- */
+.js .proof p[data-scrub] { color: inherit; }
+.js .proof .w { color: rgba(12, 13, 16, .15); transition: color 450ms ease; }
+.js .proof .w.lit { color: var(--ink-3); }
+.js .proof b .w.lit { color: var(--ink); }
+.proof { padding-bottom: clamp(56px, 8vw, 112px); }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: clamp(40px, 6vw, 88px); }
+.tile { display: flex; flex-direction: column; min-height: 208px; padding: 22px; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-outer); box-shadow: 0 1px 0 #fff inset, 0 24px 48px -36px rgba(12, 13, 16, .25); }
+.tile-n { font-size: clamp(44px, 4.6vw, 68px); font-weight: 500; letter-spacing: -.06em; line-height: 1; color: var(--cobalt); }
+.tile h2 { margin-top: auto; padding-top: 24px; font-size: 18px; font-weight: 500; letter-spacing: -.025em; }
+.tile p { margin-top: 4px; font-size: 14px; color: var(--ink-2); }
+
+/* ---------- Section heads: the rule draws, the title rises letter by letter ---------- */
+.js .sec-head[data-reveal] { opacity: 1; translate: none; position: relative; border-top-color: transparent; }
+.js .sec-head::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform 1200ms var(--ease-in-out); }
+.js .sec-head.in::before { transform: scaleX(1); }
+.js .sec-head .idx, .js .sec-head p { opacity: 0; transition: opacity 700ms ease 350ms; }
+.js .sec-head.in .idx, .js .sec-head.in p { opacity: 1; }
+[data-split] { overflow: hidden; padding-bottom: .16em; margin-bottom: -.16em; }
+.js [data-split] .ch { display: inline-block; white-space: pre; translate: 0 118%; transition: translate 900ms var(--ease-out); transition-delay: calc(var(--c) * 28ms + 150ms); }
+.js .in [data-split] .ch { translate: none; }
+
+/* ---------- Projects: copy cascades in, panel swings up with the scroll ---------- */
+.js .proj-copy[data-reveal] { opacity: 1; translate: none; }
+.js .proj-copy > * { opacity: 0; translate: 0 20px; transition: opacity 650ms ease, translate 850ms var(--ease-out); }
+.js .proj-copy.in > * { opacity: 1; translate: none; }
+.js .proj-copy > :nth-child(2) { transition-delay: 60ms; }
+.js .proj-copy > :nth-child(3) { transition-delay: 120ms; }
+.js .proj-copy > :nth-child(4) { transition-delay: 180ms; }
+.js .proj-copy > :nth-child(5) { transition-delay: 240ms; }
+.js .proj-copy > :nth-child(6) { transition-delay: 300ms; }
+.js .proj-copy > :nth-child(7) { transition-delay: 360ms; }
+.js .proj-copy > :nth-child(8) { transition-delay: 420ms; }
+.js .viz[data-reveal] { opacity: 1; translate: none; transition: none; }
+.proj { perspective: 1400px; }
+
+.feat { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+.feat li { display: grid; gap: 2px; padding: 12px 14px; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-inner); transition: translate 300ms var(--ease-out), border-color 200ms ease, box-shadow 300ms ease; }
+.feat b { font-size: 14px; font-weight: 500; letter-spacing: -.01em; }
+.feat span { font-size: 12px; line-height: 1.35; color: var(--ink-2); }
+
+.mods { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 20px; }
+.mods button { position: relative; overflow: hidden; display: grid; gap: 2px; padding: 12px; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-inner); transition: scale 160ms var(--ease-out), background-color 220ms ease, border-color 220ms ease, color 220ms ease; }
+.mods button:active { scale: .97; }
+.mods b { font-size: 14px; font-weight: 600; color: var(--cobalt); transition: color 220ms ease; }
+.mods span { font-size: 12px; color: var(--ink-2); transition: color 220ms ease; }
+.mods button.on { background: var(--cobalt); border-color: var(--cobalt); }
+.mods button.on b, .mods button.on span { color: #fff; }
+.sheet { z-index: 0; }
+.viz-sheets .fan .sheet.front { transform: rotate(0deg) translateY(-7%) scale(1.14); z-index: 5; transition-delay: 0ms; transition-duration: 550ms; }
+
+/* four-way rule switch on the simulation */
+.seg { grid-template-columns: repeat(4, 1fr); }
+.seg-pill { width: calc((100% - 6px) / 4); }
+
+/* ---------- Tilt cards ---------- */
+:where([data-tilt]) { position: relative; }
+[data-tilt] { touch-action: pan-y; will-change: transform; }
+.js [data-tilt] { transition: opacity 700ms ease, translate 900ms var(--ease-out), background-color 300ms ease, color 300ms ease, border-color 200ms ease, box-shadow 300ms ease; transition-delay: calc(var(--i, 0) * 70ms); }
+.js .viz[data-tilt] { transition: box-shadow 300ms ease; }
+.glare { position: absolute; inset: 0; z-index: 2; overflow: hidden; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity 350ms ease; }
+.glare i { position: absolute; left: 0; top: 0; width: 460px; height: 460px; margin: -230px 0 0 -230px; border-radius: 50%; background: radial-gradient(closest-side, rgba(30, 58, 240, .14), transparent); }
+[data-tilt].hot .glare { opacity: 1; }
+[data-tilt].hot { box-shadow: 0 1px 0 #fff inset, 0 36px 64px -36px rgba(12, 13, 16, .34); }
+.ways a.hot { box-shadow: 0 36px 64px -36px rgba(12, 13, 16, .5); }
+
+/* ---------- Timeline: a line that fills as you read ---------- */
+.tl-wrap { position: relative; }
+.tl-line { position: absolute; left: 148px; top: 8px; bottom: 0; width: 1px; background: var(--line); }
+.tl-line b { display: block; width: 100%; height: 100%; background: var(--cobalt); transform: scaleY(0); transform-origin: top; }
+.tl li { position: relative; border-top: 0; }
+.tl li::before { content: ""; position: absolute; left: 144px; top: 30px; width: 9px; height: 9px; border-radius: 50%; background: var(--paper); border: 1px solid var(--line-2); transition: background-color 300ms ease, border-color 300ms ease, scale 400ms var(--ease-out); }
+.tl li:first-child::before { top: 8px; }
+.tl li.on::before { background: var(--cobalt); border-color: var(--cobalt); scale: 1.25; }
+.js .tl li > div, .js .tl li > .when { opacity: .4; transition: opacity 450ms ease; }
+.js .tl li.on > div, .js .tl li.on > .when { opacity: 1; }
+
+/* ---------- Awards filter ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.chip { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 14px; font-weight: 500; transition: scale 160ms var(--ease-out), background-color 220ms ease, color 220ms ease, border-color 220ms ease; }
+.chip span { font-size: 12px; color: var(--ink-3); transition: color 220ms ease; }
+.chip:active { scale: .97; }
+.chip.on { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.chip.on span { color: rgba(244, 243, 239, .6); }
+.js .index li, .js .index li.in { transition: opacity 450ms ease, translate 900ms var(--ease-out); }
+.js .index li.in.dim { opacity: .2; }
+
+/* ---------- Big band that speeds up with your scroll ---------- */
+.band { position: relative; z-index: 1; overflow: hidden; padding-block: clamp(20px, 3vw, 44px); margin-bottom: clamp(56px, 8vw, 112px); border-block: 1px solid var(--line); background: var(--paper); }
+.band-track { display: flex; align-items: center; gap: .42em; width: max-content; padding-right: .42em; font-size: clamp(56px, 11vw, 168px); font-weight: 500; letter-spacing: -.055em; line-height: 1.05; white-space: nowrap; will-change: transform; }
+.band .o { color: transparent; -webkit-text-stroke: 1.5px var(--ink); }
+.band i { flex: none; width: .16em; height: .16em; border-radius: 50%; background: var(--cobalt); }
+
+.reach { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+
+/* ---------- Cursor ring (mouse only) ---------- */
+.cursor { position: fixed; left: 0; top: 0; z-index: 100; display: grid; place-items: center; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; border: 1px solid var(--cobalt); pointer-events: none; opacity: 0; transition: opacity 250ms ease, background-color 250ms ease; will-change: transform; }
+.cursor.on { opacity: 1; }
+.cursor.link { background: rgba(30, 58, 240, .1); }
+.cursor span { font: 500 5.5px/1 var(--sans); letter-spacing: 0; color: #fff; opacity: 0; transition: opacity 200ms ease; white-space: nowrap; }
+.cursor.label { background: var(--cobalt); }
+.cursor.label span { opacity: 1; }
+@media not ((hover: hover) and (pointer: fine)) { .cursor { display: none; } }
+
+/* ---------- Hover (real pointers only) ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .btn-cobalt:hover { background: #2b47ff; }
+  .btn-cobalt:hover::after { transform: translateX(120%); transition: transform 750ms var(--ease-out); }
+  .btn-line:hover { border-color: var(--ink); background: #fff; }
+  .feat li:hover { translate: 0 -3px; border-color: var(--line-2); box-shadow: 0 14px 24px -18px rgba(12, 13, 16, .35); }
+  .mods button:hover { border-color: var(--cobalt); }
+  .chip:hover { border-color: var(--ink); }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 900px) {
+  .tiles { grid-template-columns: 1fr 1fr; }
+  .tile { min-height: 168px; padding: 18px; }
+}
+@media (max-width: 640px) {
+  .mods { grid-template-columns: 1fr 1fr; }
+  .feat b { font-size: 13px; }
+  .hero-cta .btn { flex: 1 1 auto; justify-content: center; }
+  .reach .btn { flex: 1 1 40%; justify-content: center; }
+  .tl-line { left: 4px; }
+  .tl li { padding-left: 26px; }
+  .tl li::before { left: 0; top: 28px; }
+  .seg button { padding: 0 9px; }
+}
+
+/* ---------- Reduced motion: keep fades and colour, drop movement ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal], .js .proj-copy > *, .js [data-split] .ch { translate: none !important; }
+  .js .sec-head::before { transform: scaleX(1); transition: none; }
+  .ripple, .cursor { display: none; }
+  .btn-cobalt:hover::after { transition: none; transform: translateX(-120%); }
+  .feat li:hover { translate: none; }
+  .viz-sheets .fan .sheet.front { transition-duration: 0ms; }
+}

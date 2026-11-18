@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zackaryaa Ishraq — Founder, student, freelancer</title>
+<meta name="description" content="Zackaryaa Ishraq: founder of QuantDrill and UMT, Discrete Mathematics student at Warwick, and freelance web developer. Open to internships, freelance builds and co-founders.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zackaryaa Ishraq — Founder, student, freelancer">
+<meta property="og:description" content="Founder of QuantDrill and UMT, Discrete Mathematics student at Warwick, and freelance web developer.">
+<link rel="canonical" href="https://zackaryaa.me/">
+<meta property="og:url" content="https://zackaryaa.me/">
+<meta property="og:image" content="https://zackaryaa.me/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zackaryaa Ishraq: I build things. Founder, student, freelancer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F4F3EF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E3AF0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'%3EZI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="fx.css?v=9">
+<link rel="stylesheet" href="premium.css?v=9">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#work">Skip to content</a>
+<canvas id="atmos" aria-hidden="true"></canvas>
+
+<!-- ============ HEADER ============ -->
+<header class="bar" id="bar">
+  <a class="brand" href="#top">Zackaryaa Ishraq</a>
+  <nav class="links" aria-label="Sections">
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#awards">Awards</a>
+    <a href="#leadership">Leadership</a>
+  </nav>
+  <div class="contact">
+    <button class="btn btn-ink" id="contactBtn" data-magnet aria-expanded="false" aria-haspopup="dialog" aria-controls="contactPop">
+      Contact
+      <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <i class="progress" id="progress" aria-hidden="true"></i>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap" id="top" data-pose="wave">
+  <div class="hero-copy">
+    <p class="hello" data-vortex>Hello, I’m Zackaryaa.</p>
+    <h1 data-rise aria-label="I build things.">
+      <span class="line">I build</span>
+      <span class="line">things<em>.</em></span>
+    </h1>
+    <ol class="roles" aria-label="What I am">
+      <li data-tilt="8" data-reveal style="--i:6"><span class="mono">01</span><b>Founder</b><span>QuantDrill and UMT</span></li>
+      <li data-tilt="8" data-reveal style="--i:7"><span class="mono">02</span><b>Student</b><span>Discrete Maths, Warwick</span></li>
+      <li data-tilt="8" data-reveal style="--i:8"><span class="mono">03</span><b>Freelancer</b><span>Websites for businesses</span></li>
+    </ol>
+    <p class="lede" data-reveal style="--i:9">Live products with real users, websites for clients, and a national hackathon podium.</p>
+    <div class="hero-cta" data-reveal style="--i:10">
+      <a class="btn btn-cobalt btn-lg" href="#work" data-magnet>See my work <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5v8M2.5 6 6 9.5 9.5 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <button class="btn btn-line btn-lg" data-open-contact data-magnet>Get in touch</button>
+    </div>
+  </div>
+  <div class="hero-stage">
+    <svg class="orbit" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="200" r="190" />
+      <circle class="dash" cx="200" cy="200" r="160" />
+      <g class="ticks"><path d="M200 4v12M396 200h-12M200 396v-12M4 200h12"/></g>
+    </svg>
+    <div class="stage" id="stage" data-cursor="Drag me"></div>
+    <i class="stage-shadow" aria-hidden="true"></i>
+  </div>
+  <div class="hero-meta" data-reveal style="--i:11">
+    <span>London / Coventry, UK</span>
+    <a href="#work" class="scroll-hint">Scroll <svg width="10" height="12" viewBox="0 0 10 12" aria-hidden="true"><path d="M5 1v10M1 7l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="proof wrap" data-pose="rest">
+  <p data-scrub><b>Two</b> live products with real users. <b>2nd</b> in the country at the TechMentor hackathon final. <b>1st</b> at MathsBombe. <b>A*A*</b> in Maths and Further Maths.</p>
+  <div class="tiles">
+    <article class="tile" data-tilt="8" data-reveal><span class="tile-n mono" data-count="2">2</span><h2>Live products</h2><p>QuantDrill and UMT, both with real users.</p></article>
+    <article class="tile" data-tilt="8" data-reveal style="--i:1"><span class="tile-n mono" data-count="2" data-suffix="nd">2nd</span><h2>In the country</h2><p>TechMentor National Hackathon Final, 2026.</p></article>
+    <article class="tile" data-tilt="8" data-reveal style="--i:2"><span class="tile-n mono" data-count="96" data-suffix="%">96%</span><h2>Further Maths</h2><p>A* at A level, next to an A* in Maths.</p></article>
+    <article class="tile" data-tilt="8" data-reveal style="--i:3"><span class="tile-n mono" data-count="15">15</span><h2>Awards</h2><p>Across maths, coding, writing and sport.</p></article>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="wrap" id="work">
+  <header class="sec-head" data-reveal>
+    <span class="idx mono">01</span>
+    <h2 data-split>Work</h2>
+    <p>Things I designed, built and launched.</p>
+  </header>
+
+  <!-- QuantDrill -->
+  <article class="proj" data-pose="drill">
+    <div class="proj-copy" data-reveal>
+      <p class="kicker"><span class="live"></span>Live product · Founder · 2026</p>
+      <h3>QuantDrill</h3>
+      <p class="tagline">A competitive mental-maths platform for quant and trading applicants.</p>
+      <p>What started as a two-minute speed drill is now a multiplayer product: player accounts, friends and invite codes, a weekly global leaderboard, fourteen ranks from Intern to Partner, and per-question analytics that find your weak spots.</p>
+      <ul class="feat">
+        <li><b>Accounts</b><span>A profile and username that follow you</span></li>
+        <li><b>Friends</b><span>Requests, invite codes and notifications</span></li>
+        <li><b>Leaderboard</b><span>Global top ten, reset every Monday</span></li>
+        <li><b>14 ranks</b><span>From Intern all the way to Partner</span></li>
+        <li><b>Analytics</b><span>Heatmaps that find your weak spots</span></li>
+        <li><b>Streaks</b><span>Milestones that bring you back</span></li>
+      </ul>
+      <ul class="tags"><li>JavaScript</li><li>Firebase</li><li>Python</li><li>Netlify</li></ul>
+      <a class="go btn btn-line" data-magnet href="https://quantdrill.net" target="_blank" rel="noopener">quantdrill.net <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="viz" data-tilt="3" data-scroll-in data-reveal style="--i:1">
+      <div class="qd" id="qd" aria-hidden="true">
+        <div class="qd-top">
+          <span class="qd-label">Round</span>
+          <span class="qd-timer"><i id="qdTimer"></i></span>
+          <span class="qd-score mono" id="qdScore">0</span>
+        </div>
+        <div class="qd-q mono"><span id="qdQ">47 × 8</span><span class="qd-eq">=</span><span class="qd-a" id="qdA"></span></div>
+        <div class="qd-rank">
+          <span class="qd-label">Rank</span>
+          <b id="qdRank">Intern</b>
+        </div>
+        <ol class="qd-ladder" id="qdLadder"></ol>
+      </div>
+    </div>
+  </article>
+
+  <!-- Courier -->
+  <article class="proj" data-pose="route">
+    <div class="proj-copy" data-reveal>
+      <p class="kicker">Simulation study · Nov 2026</p>
+      <h3>Courier Dispatch Simulator</h3>
+      <p class="tagline">Who should deliver your order? I tested four answers on real city streets.</p>
+      <p>Four dispatch strategies raced on the real street networks of Dubai Marina and Istanbul Kadıköy. Optimal matching cut average peak delivery time by about a third. But roughly 93% of that gain came from one simple rule, and it cost the unluckiest customer around 24 extra minutes.</p>
+      <dl class="stats">
+        <div><dt>Strategies</dt><dd class="mono">4</dd></div>
+        <div><dt>Cities</dt><dd class="mono">2</dd></div>
+        <div><dt>Paired seeds</dt><dd class="mono">100</dd></div>
+        <div><dt>Tests</dt><dd class="mono">21</dd></div>
+      </dl>
+      <ul class="tags"><li>Python</li><li>NetworkX</li><li>OSMnx</li><li>SciPy</li><li>pytest</li></ul>
+      <a class="go btn btn-line" data-magnet href="https://github.com/zackaryaa-i/courier-dispatch-sim" target="_blank" rel="noopener">Code and write-up <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="viz viz-sim" data-tilt="3" data-scroll-in data-reveal style="--i:1">
+      <canvas id="sim" aria-label="A small live courier dispatch simulation"></canvas>
+      <div class="sim-ui">
+        <div class="seg" role="tablist" aria-label="Dispatch rule">
+          <button role="tab" aria-selected="true" data-rule="oldest">Oldest</button>
+          <button role="tab" aria-selected="false" data-rule="nearest">Nearest</button>
+          <button role="tab" aria-selected="false" data-rule="optimal">Optimal</button>
+          <button role="tab" aria-selected="false" data-rule="batch">Batched</button>
+          <i class="seg-pill" aria-hidden="true"></i>
+        </div>
+        <div class="sim-read mono">
+          <span>avg wait <b id="simAvg">0.0</b>s</span>
+          <span>longest <b id="simMax">0.0</b>s</span>
+        </div>
+      </div>
+      <p class="sim-note">A toy version of the study, running live. Pick a rule and watch the waits change.</p>
+    </div>
+  </article>
+
+  <!-- UMT -->
+  <article class="proj" data-pose="sheets">
+    <div class="proj-copy" data-reveal>
+      <p class="kicker"><span class="live"></span>Live product · Founder · 2026</p>
+      <h3>UMT</h3>
+      <p class="tagline">Free revision papers for university modules, with full mark schemes.</p>
+      <p>University students get plenty of lectures and very few practice papers. UMT fixes that: for every topic, a question sheet and worked answers with a proper mark scheme. Four Warwick modules and 52 topics so far, typeset through a pipeline I built.</p>
+      <dl class="stats">
+        <div><dt>Modules</dt><dd class="mono">4</dd></div>
+        <div><dt>Topics</dt><dd class="mono">52</dd></div>
+        <div><dt>PDFs</dt><dd class="mono">104</dd></div>
+      </dl>
+      <div class="mods" role="group" aria-label="Modules on UMT">
+        <button data-sheet="3"><b>MA138</b><span>16 topics</span></button>
+        <button data-sheet="2"><b>MA142</b><span>13 topics</span></button>
+        <button data-sheet="1"><b>CS146</b><span>15 topics</span></button>
+        <button data-sheet="0"><b>ST120</b><span>8 topics</span></button>
+      </div>
+      <ul class="tags"><li>LaTeX</li><li>JavaScript</li><li>Python</li><li>Netlify</li></ul>
+      <a class="go btn btn-line" data-magnet href="https://unimixedtutor.com" target="_blank" rel="noopener">unimixedtutor.com <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="viz viz-sheets" data-tilt="3" data-scroll-in data-reveal style="--i:1" aria-hidden="true">
+      <div class="fan">
+        <div class="sheet" style="--n:0"><header><b>ST120</b><span>Introduction to Probability</span></header><p>Topic 08 · Questions</p><i></i><i></i><i class="s"></i><em>[4]</em><i></i><i class="s"></i><em>[6]</em><i></i><i></i></div>
+        <div class="sheet" style="--n:1"><header><b>CS146</b><span>Discrete Mathematics</span></header><p>Topic 03 · Questions</p><i></i><i class="s"></i><em>[4]</em><i></i><i></i><i class="s"></i><em>[6]</em><i></i></div>
+        <div class="sheet" style="--n:2"><header><b>MA142</b><span>Calculus 1</span></header><p>Topic 11 · Worked answers</p><i></i><i></i><i class="s"></i><em>[M1 A1]</em><i></i><i class="s"></i><em>[B1]</em><i></i></div>
+        <div class="sheet" style="--n:3"><header><b>MA138</b><span>Sets and Numbers</span></header><p>Topic 01 · Questions</p><i></i><i class="s"></i><em>[4]</em><i></i><i></i><i class="s"></i><em>[6]</em><i></i><i class="s"></i><em>[8]</em></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Minor -->
+  <div class="minor" data-pose="desk">
+    <article data-reveal>
+      <p class="kicker">Hackathon · Aug 2026</p>
+      <h3>TechMentor National Final <span class="badge">2nd nationally</span></h3>
+      <p>An AI tool that rates tech firms on supply-chain sustainability. I designed the scoring and ranking logic, split the work across a team of four and led the pitch.</p>
+    </article>
+    <article data-reveal style="--i:1">
+      <p class="kicker">Client work · 2026</p>
+      <h3>Websites for businesses</h3>
+      <p>Multi-page lead-generation sites with step-by-step enquiry forms that log straight into the client’s own spreadsheet. Most recently <a href="https://cardmachinepro.tech" target="_blank" rel="noopener">cardmachinepro.tech</a>.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="wrap" id="experience" data-pose="desk">
+  <header class="sec-head" data-reveal>
+    <span class="idx mono">02</span>
+    <h2 data-split>Experience</h2>
+    <p>Where I’ve worked and studied.</p>
+  </header>
+  <div class="exp">
+    <div class="tl-wrap"><i class="tl-line" aria-hidden="true"><b></b></i><ol class="tl">
+      <li data-reveal>
+        <span class="when mono">2026 — 2030</span>
+        <div><h3>MEng Discrete Mathematics</h3><p class="org">University of Warwick</p><p>Mathematics and computer science in one degree: algorithms, probability, discrete maths and Java.</p></div>
+      </li>
+      <li data-reveal>
+        <span class="when mono">Jun 2026 — now</span>
+        <div><h3>Private Maths Tutor</h3><p class="org">Self-employed</p><p>Weekly GCSE maths tuition, after earlier work with KS2 and KS3 students.</p></div>
+      </li>
+      <li data-reveal>
+        <span class="when mono">Jun — Jul 2024</span>
+        <div><h3>Summer Intern</h3><p class="org">BP · Canary Wharf</p><p>One of five interns selected across Trading &amp; Shipping, Risk and Data Analytics. Built a supply-elasticity model for a case study and evaluated airlines’ credit risk.</p></div>
+      </li>
+      <li data-reveal>
+        <span class="when mono">2024 — 2026</span>
+        <div><h3>Peer Mentor</h3><p class="org">Dame Alice Owen’s School</p><p>Ran weekly Year 8 maths sessions and one-to-one French mentoring. Left with A*A*A*AA at A level, including 96% in Further Maths and an A* project on Shor's algorithm.</p></div>
+      </li>
+      <li data-reveal>
+        <span class="when mono">Jul 2023</span>
+        <div><h3>Work Experience</h3><p class="org">National Grid · Isle of Grain terminal</p><p>Shadowed control-room staff at an oil and gas storage terminal: product testing, tanker loading and safety controls.</p></div>
+      </li>
+    </ol></div>
+  </div>
+  <h3 class="sub-head" data-reveal>Toolkit</h3>
+  <div class="rings">
+    <div class="ring" data-reveal style="--i:0">
+      <canvas aria-hidden="true"></canvas>
+      <div class="ring-label" aria-hidden="true"><b>Code</b><span>5 languages</span></div>
+      <ul aria-hidden="true"><li class="ring-item">Python</li><li class="ring-item">Java</li><li class="ring-item">SQL</li><li class="ring-item">C++</li><li class="ring-item">JavaScript</li></ul>
+      <p class="sr-only">Code: Python (competition level), Java, SQL, C++, JavaScript</p>
+    </div>
+    <div class="ring" data-reveal style="--i:1">
+      <canvas aria-hidden="true"></canvas>
+      <div class="ring-label" aria-hidden="true"><b>Libraries</b><span>6 I reach for</span></div>
+      <ul aria-hidden="true"><li class="ring-item">NumPy</li><li class="ring-item">SciPy</li><li class="ring-item">NetworkX</li><li class="ring-item">OSMnx</li><li class="ring-item">Matplotlib</li><li class="ring-item">pytest</li></ul>
+      <p class="sr-only">Libraries: NumPy, SciPy, NetworkX, OSMnx, Matplotlib, pytest</p>
+    </div>
+    <div class="ring" data-reveal style="--i:2">
+      <canvas aria-hidden="true"></canvas>
+      <div class="ring-label" aria-hidden="true"><b>Shipping</b><span>5 tools</span></div>
+      <ul aria-hidden="true"><li class="ring-item">Git</li><li class="ring-item">GitHub</li><li class="ring-item">Netlify</li><li class="ring-item">Firebase</li><li class="ring-item">Apps Script</li></ul>
+      <p class="sr-only">Shipping: Git and GitHub, Netlify, Firebase, Google Apps Script</p>
+    </div>
+    <div class="ring" data-reveal style="--i:3">
+      <canvas aria-hidden="true"></canvas>
+      <div class="ring-label" aria-hidden="true"><b>Spoken</b><span>4 languages</span></div>
+      <ul aria-hidden="true"><li class="ring-item">English</li><li class="ring-item">French</li><li class="ring-item">Arabic</li><li class="ring-item">Spanish</li></ul>
+      <p class="sr-only">Spoken: English, French (professional), Arabic (intermediate), Spanish (conversational)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AWARDS ============ -->
+<section class="wrap" id="awards" data-pose="lift">
+  <header class="sec-head" data-reveal>
+    <span class="idx mono">03</span>
+    <h2 data-split>Awards</h2>
+  </header>
+  <div class="filters" role="group" aria-label="Filter awards" data-reveal>
+    <button class="chip on" data-filter="all">All <span class="mono">15</span></button>
+    <button class="chip" data-filter="Maths">Maths <span class="mono">4</span></button>
+    <button class="chip" data-filter="Coding">Coding <span class="mono">4</span></button>
+    <button class="chip" data-filter="Writing">Writing <span class="mono">2</span></button>
+    <button class="chip" data-filter="School">School <span class="mono">2</span></button>
+    <button class="chip" data-filter="Sport">Sport <span class="mono">3</span></button>
+  </div>
+  <ul class="index">
+    <li data-reveal><span class="cat">Maths</span><span class="what">MathsBombe, University of Manchester</span><span class="res">1st</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">AMSP Maths Feast</span><span class="res">2nd nationally</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">TrinMac</span><span class="res">15th globally</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">UKMT Senior Maths Challenge</span><span class="res">Gold</span></li>
+    <li data-reveal><span class="cat">Coding</span><span class="what">TechMentor National Hackathon Final</span><span class="res">2nd nationally</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">UK Bebras Coding Challenge</span><span class="res">Gold</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">Perse Coding Team Challenge</span><span class="res">Gold</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">Oxford University Computing Challenge</span><span class="res">Distinction</span></li>
+    <li data-reveal><span class="cat">Writing</span><span class="what">Rotary Young Writer</span><span class="res">2nd nationally</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">Oxford Scholastica Essay Competition</span><span class="res">Global shortlist</span></li>
+    <li data-reveal><span class="cat">School</span><span class="what">Outstanding Achievement in Computer Science</span><span class="res">Award</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">Outstanding Achievement in Languages</span><span class="res">Top of 600+</span></li>
+    <li data-reveal><span class="cat">Sport</span><span class="what">South East England Powerlifting Championships, 2025</span><span class="res">Champion</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">British Classic Bench Championships, 2026</span><span class="res">7th</span></li>
+    <li data-reveal><span class="cat"></span><span class="what">London Divisional Arm Wrestling Championships, 2026</span><span class="res">4th</span></li>
+  </ul>
+</section>
+
+<!-- ============ LEADERSHIP ============ -->
+<section class="wrap" id="leadership" data-pose="hand">
+  <header class="sec-head" data-reveal>
+    <span class="idx mono">04</span>
+    <h2 data-split>Leadership</h2>
+    <p>Rooms I’ve been trusted to speak in.</p>
+  </header>
+  <div class="lead">
+    <article data-tilt="7" data-reveal><span class="role">Co-chair</span><h3>Student-Staff Liaison Committee</h3><p>Department of Computer Science, University of Warwick</p></article>
+    <article data-tilt="7" data-reveal style="--i:1"><span class="role">Member</span><h3>Academic Forum</h3><p>University of Warwick</p></article>
+    <article data-tilt="7" data-reveal style="--i:2"><span class="role">Elected</span><h3>Students’ Union Steering Group</h3><p>Warwick Students’ Union</p></article>
+    <article data-tilt="7" data-reveal style="--i:3"><span class="role">Member</span><h3>Warwick Entrepreneurship Society</h3><p>WESOC, University of Warwick</p></article>
+    <article data-tilt="7" data-reveal style="--i:4"><span class="role">Player</span><h3>University Dodgeball</h3><p>Competing in BUCS for Warwick</p></article>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="band-track" id="band"><span>Internships</span><i></i><span class="o">Freelance builds</span><i></i><span>Co-founders</span><i></i><span class="o">Good problems</span><i></i></div></div>
+
+<!-- ============ CONTACT ============ -->
+<section class="wrap" id="contact" data-pose="wave">
+  <header class="sec-head" data-reveal>
+    <span class="idx mono">05</span>
+    <h2 data-split>Work with me</h2>
+    <p>Three good reasons to get in touch.</p>
+  </header>
+  <div class="ways">
+    <a data-tilt="6" data-reveal href="mailto:zackaryaa.ishraq@gmail.com?subject=Internship%20opportunity">
+      <span class="mono n">A</span>
+      <h3>Hiring an intern?</h3>
+      <p>I’m looking for internships in quantitative, data and software roles.</p>
+      <span class="cta">Email me about a role <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+    <a data-tilt="6" data-reveal style="--i:1" href="mailto:zackaryaa.ishraq@gmail.com?subject=Website%20project">
+      <span class="mono n">B</span>
+      <h3>Need a website?</h3>
+      <p>Fast, clean sites for businesses and organisations. Built, launched and handed over.</p>
+      <span class="cta">Email me about a project <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+    <a data-tilt="6" data-reveal style="--i:2" href="mailto:zackaryaa.ishraq@gmail.com?subject=Startup%20idea">
+      <span class="mono n">C</span>
+      <h3>Building something?</h3>
+      <p>Founders and future co-founders: I’m always up for a conversation about a good problem.</p>
+      <span class="cta">Email me about an idea <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+  </div>
+  <div class="reach" data-reveal>
+    <button class="btn btn-cobalt btn-lg" id="copyBig" data-copy="zackaryaa.ishraq@gmail.com" data-magnet><span>Copy my email</span></button>
+    <a class="btn btn-line btn-lg" href="https://www.linkedin.com/in/zackaryaa-ishraq" target="_blank" rel="noopener" data-magnet>LinkedIn <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="btn btn-line btn-lg" href="https://github.com/zackaryaa-i" target="_blank" rel="noopener" data-magnet>GitHub <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="btn btn-line btn-lg" href="assets/Zackaryaa-Ishraq-CV.pdf" download data-magnet>Download résumé <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5v8M2.5 6 6 9.5 9.5 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot wrap">
+  <span>© 2026 Zackaryaa Ishraq</span>
+  <span>Designed and built by me.</span>
+  <button class="motion-toggle" id="motionToggle" aria-pressed="false">Pause motion</button>
+  <a href="#top">Back to top</a>
+</footer>
+
+<!-- Contact: three cards over a blurred page -->
+<div class="reach-over" id="contactPop" role="dialog" aria-modal="true" aria-label="Contact details">
+  <div class="reach-scrim" data-close></div>
+  <div class="reach-stack">
+    <div class="reach-card" style="--k:0">
+      <div><span class="pop-label">Email</span><a class="pop-value" href="mailto:zackaryaa.ishraq@gmail.com">zackaryaa.ishraq@gmail.com</a></div>
+      <button class="copy" id="copyBtn" data-copy="zackaryaa.ishraq@gmail.com"><span>Copy</span></button>
+    </div>
+    <a class="reach-card" style="--k:1" href="https://www.linkedin.com/in/zackaryaa-ishraq" target="_blank" rel="noopener">
+      <div><span class="pop-label">LinkedIn</span><span class="pop-value">in/zackaryaa-ishraq</span></div>
+      <svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a class="reach-card" style="--k:2" href="https://github.com/zackaryaa-i" target="_blank" rel="noopener">
+      <div><span class="pop-label">GitHub</span><span class="pop-value">zackaryaa-i</span></div>
+      <svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <button class="btn btn-ink btn-lg reach-close" style="--k:3" data-close>Close
+      <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- Fixed corner pieces -->
+<button class="dock" id="dock" aria-label="Back to top"></button>
+<a class="btn resume" href="assets/Zackaryaa-Ishraq-CV.pdf" download>
+  Résumé
+  <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.5v7M2.5 5.5 6 9l3.5-3.5M2 10.5h8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<script src="main.js?v=9" defer></script>
+<script src="fx.js?v=9" defer></script>
+<script src="assets/vendor/three.min.js?v=160" defer></script>
+<script src="avatar.js?v=9" defer></script>
+</body>
+</html>
